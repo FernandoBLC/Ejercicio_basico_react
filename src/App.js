@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import Listmichis from "./Complements/Listmichis";
+import {Route} from "wouter"
+import Menusearch from "./Complements/Menusearch";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="App-header">
+        <h1><a href='/'>Gifts</a></h1>
+          <Route path='/' component={Menusearch} />
+          <Route path='/gift/:giftsearch' component={Listmichis} />
+      </section>
     </div>
-  );
+  )
 }
 
 export default App;
