@@ -1,0 +1,17 @@
+[33mcommit 7b6e4bfa121fc1a0e4ae5bd3944c531e05a7cab7[m[33m ([m[1;36mHEAD -> [m[1;32mpre-main[m[33m)[m
+Author: FernandoBLC <cfbl1512@gmail.com>
+Date:   Fri Jul 22 12:38:34 2022 -0500
+
+    Prueba-1-v2 StorageLocal, Resques_Correction, addCallmichis
+
+[33mcommit 0444ed39cd2f8c0ec35d5d83a41bb6a918da1d80[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: FernandoBLC <cfbl1512@gmail.com>
+Date:   Sat Jul 16 15:38:40 2022 -0500
+
+    Practica-1-curso-midudev
+
+[33mcommit 88331e6ccb826f41c0fa37affcad0114962fc8be[m
+Author: FernandoBLC <cfbl1512@gmail.com>
+Date:   Sat Jul 9 19:31:39 2022 -0500
+
+    Initialize project using Create React App
