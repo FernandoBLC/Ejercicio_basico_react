@@ -1,23 +1,20 @@
-import React, {useState,useEffect} from "react";
+import React, {useState} from "react";
 import {Link, useLocation} from "wouter"
-import getMichis from "../Services/getMichis";
-import Listmichis from "./Listmichis";
+
+import Showmichis from "./Showmichis";
+import Callmichis from "./Callmichis";
 
 const Defaultsearch = ['Gatos','Perros','WebDeveloper', 'Apple', 'Carros']
 
 export default function Menusearch (){
-    const [Wordsearch, setWordsearch] = useState('');
+    const [wordSearch, setWordsearch] = useState('')
     const [path, setLocation] = useLocation()
-
-    const [state, setState] = useState([]);
-
-    useEffect(function () {
-        getMichis({Wordsearch:'Gatitos'}).then(state => setState(state))
-    }, [state])
+    const states = Callmichis()
+    console.log(states)
 
     const handleSubmit = evt => {
         evt.preventDefault()
-        setLocation(`/gift/${Wordsearch}`)
+        setLocation(`/gift/${wordSearch}`)
     }
 
     const handleInput = evt => {
@@ -28,10 +25,11 @@ export default function Menusearch (){
         <div>
             <h2>Bienvenido a ver gifts</h2>
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Escribe el gift a buscar' value={Wordsearch} onChange={handleInput} />
+                <input type='text' placeholder='Escribe el gift a buscar' value={wordSearch} onChange={handleInput} />
                 <button>MichiBusca tu Gift</button>
             </form>
-            <Listmichis params={state}/>
+            <h2>Ultima Busqueda</h2>
+            <Showmichis gifts={states} />
             <ul>
                 {Defaultsearch.map((nomArray) => (
                     <li key={nomArray}>
