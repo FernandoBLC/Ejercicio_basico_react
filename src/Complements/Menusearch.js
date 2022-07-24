@@ -9,7 +9,7 @@ const Defaultsearch = ['Gatos','Perros','WebDeveloper', 'Apple', 'Carros']
 export default function Menusearch (){
     const [wordSearch, setWordsearch] = useState('')
     // eslint-disable-next-line no-unused-vars
-    const [path, setLocation] = useLocation()
+    const [patqh, setLocation] = useLocation()
     const states = Callmichis()
     console.log(states)
 

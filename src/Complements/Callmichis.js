@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import getMichis from "../Services/getMichis";
 
 export default function Callmichis({giftsearch} = {giftsearch: null}){
